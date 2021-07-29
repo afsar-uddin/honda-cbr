@@ -100,6 +100,7 @@ header p {
 .modal-header .btn-close {
     opacity: 1;
 }
+
 @keyframes ride {
     0% {
         transform: translate(0, 0);
@@ -111,12 +112,10 @@ header p {
         transform: translate(0, 0);
     }
   }
-  header img {
+  header:hover img {
       position: relative;
       transition: var(--transition);
       transform: translate(0, 0);
-  }
-  header img {
       animation: ride 2s infinite;
   }
 /* Featured section style */
@@ -268,5 +267,37 @@ footer {
     }
     header span {
         color: var(--white-color)
+    }
+}
+@media only screen and (max-width:768px) {
+    .sec-space {
+        padding: 60px 0;
+    }
+    header h1,
+    .sec-intro h2 {
+        font-size: 36px;
+    }
+    .sec-intro span {
+        display: block;
+    }
+    #faq .accordion-item .accordion-button {
+        font-size: 16px;
+    }
+    header img {
+        margin-top: 45px;
+    }
+    .feature-col,
+    #clients .card,
+    #faq img {
+        margin-bottom: 45px;
+    }
+    .call2action {
+        padding: 100px 0;
+    }
+    .call2action h2 {
+        font-size: 36px;
+    }
+    .call2action p {
+        font-size: 18px;
     }
 }
