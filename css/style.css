@@ -66,6 +66,15 @@ li {
     background-color: var(--sec-bg);
 }
 /* header */
+header nav {
+    background-color: var(--banner-bg);
+}
+header nav .nav-link {
+    color: var(--white-color);
+}
+header .nav-link:focus, .nav-link:hover {
+    color: var(--link-btn-bg)
+}
 header {
     background: var(--banner-bg);
     color: var(--white-color);
@@ -91,6 +100,25 @@ header p {
 .modal-header .btn-close {
     opacity: 1;
 }
+@keyframes ride {
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(-5px, 5px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
+  }
+  header img {
+      position: relative;
+      transition: var(--transition);
+      transform: translate(0, 0);
+  }
+  header img {
+      animation: ride 2s infinite;
+  }
 /* Featured section style */
 .sec-intro {
     padding-bottom: 45px;
@@ -166,4 +194,79 @@ header p {
 #clients .card:hover {
     background-color: transparent;
     top: -5px;
+}
+/* faq section style */
+#faq .accordion-button:focus, 
+#faq .accordion-button:not(.collapsed) {
+    background-color: transparent;
+    border-color: transparent;
+}
+#faq .accordion-button:focus {
+    box-shadow: none;
+}
+#faq .accordion-item .accordion-button {
+    font-size: 24px;
+    font-weight: 500;
+}
+#faq .accordion-body {
+    color: #7E848C;
+}
+#faq .accordion-button:not(.collapsed) {
+    color: #383838;
+}
+#faq .accordion-item {
+    margin: 10px 0;
+    border: 1px solid rgba(0,0,0,.125);
+}
+/* call to action style */
+.call2action {
+    background-image: url('../images/bike-3.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+    position: relative;
+    z-index: 1;
+    color: var(--white-color);
+}
+.call2action:before {
+    position: absolute;
+    content: "";
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: -1;
+}
+.call2action h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+.call2action p {
+    font-size: 22px;
+}
+/* contact form style */
+#contact .form-control:focus {
+    border: 1px solid var(--banner-bg);
+    box-shadow: none;
+}
+form button {
+    border-radius: 5px;
+}
+/* footer */
+footer {
+    background-color: var(--banner-bg);
+    color: var(--white-color);
+    padding: 30px;
+}
+
+
+@media only screen and (max-width:992px) {
+    header .navbar-toggler {
+        border: 1px solid var(--link-btn-bg);
+        padding: 10px 15px;
+    }
+    header span {
+        color: var(--white-color)
+    }
 }
